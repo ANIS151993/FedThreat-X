@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FedThreat-X Research Report</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="brand-mark">FX</span><span>FedThreat-X</span></a>
+      <nav class="nav"><a href="index.html#analytics">Analytics</a><a href="poster.html">Poster</a><a href="implementation.html">Implementation</a></nav>
+    </header>
+    <main class="report">
+      <div class="eyebrow">IEEE QPAIN 2026</div>
+      <h1>FedThreat-X Research Report</h1>
+      <p class="lead">FedThreat-X enables privacy-preserving federated threat intelligence for multi-cloud cybersecurity by sharing model updates instead of raw surveillance logs.</p>
+
+      <h2>Abstract Summary</h2>
+      <p>The framework addresses cross-cloud detection challenges caused by sensitive logs, inconsistent security policies, heterogeneous cloud architecture, and non-IID telemetry. It combines threat-aware adaptive aggregation, proximal stability management, and lightweight local MLP classification to train across cloud nodes while preserving confidentiality.</p>
+
+      <h2>Model Configuration</h2>
+      <table>
+        <thead><tr><th>Component</th><th>Configuration</th></tr></thead>
+        <tbody>
+          <tr><td>Local model</td><td>Lightweight 3-layer MLP classifier</td></tr>
+          <tr><td>Batch size</td><td>256 samples per client round</td></tr>
+          <tr><td>Local epochs</td><td>5 per communication round</td></tr>
+          <tr><td>Optimizer</td><td>Adam, learning rate 0.001</td></tr>
+          <tr><td>Proximal regularization</td><td>0.05</td></tr>
+          <tr><td>Communication rounds</td><td>50 global synchronization rounds</td></tr>
+          <tr><td>Privacy guarantee</td><td>Raw logs never shared; model gradients/weights exchanged</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Performance Comparison</h2>
+      <table>
+        <thead><tr><th>Model</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>F1</th></tr></thead>
+        <tbody>
+          <tr><td>CNN</td><td>94.10%</td><td>92.85%</td><td>93.40%</td><td>93.12%</td></tr>
+          <tr><td>LSTM</td><td>95.20%</td><td>94.10%</td><td>94.65%</td><td>94.37%</td></tr>
+          <tr><td>GNN-TI</td><td>96.40%</td><td>95.30%</td><td>95.90%</td><td>95.60%</td></tr>
+          <tr><td>BiLSTM</td><td>96.85%</td><td>96.00%</td><td>96.35%</td><td>96.17%</td></tr>
+          <tr><td><strong>FedThreat-X</strong></td><td><strong>98.70%</strong></td><td><strong>98.30%</strong></td><td><strong>98.57%</strong></td><td><strong>98.70%</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>Feature Importance</h2>
+      <p>MITRE techniques, account identifiers, category fields, IP address, entity type, temporal features, account object IDs, folder paths, URLs, and device names contribute to triage quality. The strongest feature importance reported in the paper is MITRE techniques at approximately 18.2.</p>
+
+      <h2>Publication</h2>
+      <p>Published April 16, 2026 at IEEE QPAIN 2026. IEEE Xplore document: <a href="https://ieeexplore.ieee.org/document/11546478">11546478</a>.</p>
+      <p><a class="button primary" href="assets/papers/FedThreat-X-IEEE-QPAIN-2026.pdf">Open PDF</a></p>
+    </main>
+    <footer class="footer">Copyright © 2026 Md Anisur Rahman Chowdhury.</footer>
+  </body>
+</html>
