@@ -1,0 +1,22 @@
+{
+  "title": "FedThreat-X: A Privacy-Preserving Federated Threat Intelligence Framework for Multi-Cloud Cybersecurity",
+  "venue": "2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence & Networking (QPAIN)",
+  "publication_date": "2026-04-16",
+  "dataset": {
+    "name": "Microsoft Security Incident / GUIDE dataset",
+    "evidence_records": 13000000,
+    "triaged_events": 1000000,
+    "mitre_techniques": 441,
+    "evaluation_instances": 300000,
+    "class_totals": {"True Positive": 180000, "Benign Positive": 75000, "False Positive": 45000}
+  },
+  "federated_training": {"local_model": "Lightweight 3-Layer MLP", "batch_size": 256, "local_epochs": 5, "learning_rate": 0.001, "proximal_regularization": 0.05, "communication_rounds": 50, "privacy": "Raw logs never shared; only model updates are exchanged"},
+  "models": [
+    {"name": "CNN", "accuracy": 94.10, "precision": 92.85, "recall": 93.40, "f1": 93.12},
+    {"name": "LSTM", "accuracy": 95.20, "precision": 94.10, "recall": 94.65, "f1": 94.37},
+    {"name": "GNN-TI", "accuracy": 96.40, "precision": 95.30, "recall": 95.90, "f1": 95.60},
+    {"name": "BiLSTM", "accuracy": 96.85, "precision": 96.00, "recall": 96.35, "f1": 96.17},
+    {"name": "FedThreat-X", "accuracy": 98.70, "precision": 98.30, "recall": 98.57, "f1": 98.70}
+  ],
+  "feature_importance": [["MITRE Techniques", 18.2], ["AccountUpn", 15.3], ["Category", 13.8], ["IP Address", 7.5], ["Entity Type", 7.5], ["Day", 6.0], ["Account Object ID", 5.3], ["Folder Path", 3.8], ["URL", 3.2], ["Device Name", 3.0]]
+}
