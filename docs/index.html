@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FedThreat-X | Federated Multi-Cloud Threat Intelligence</title>
+    <meta name="description" content="FedThreat-X research portal for privacy-preserving federated threat intelligence across multi-cloud cybersecurity environments.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="FedThreat-X home"><span class="brand-mark">FX</span><span>FedThreat-X</span></a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#analytics">Analytics</a>
+        <a href="#architecture">Architecture</a>
+        <a href="report.html">Report</a>
+        <a href="poster.html">Poster</a>
+        <a href="implementation.html">Implementation</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="eyebrow">IEEE QPAIN 2026 Published Research</div>
+          <h1>FedThreat-X</h1>
+          <p class="lead">A privacy-preserving federated threat intelligence framework for multi-cloud cybersecurity, designed for heterogeneous cloud telemetry, non-IID threat drift, and SOC-ready detection without exchanging raw logs.</p>
+          <div class="actions">
+            <a class="button primary" href="assets/papers/FedThreat-X-IEEE-QPAIN-2026.pdf">Read IEEE Paper</a>
+            <a class="button" href="https://ieeexplore.ieee.org/document/11546478">IEEE Xplore</a>
+            <a class="button" href="https://youtu.be/8kYnDgFR79g">Watch Video</a>
+            <a class="button" href="https://github.com/ANIS151993/FedThreat-X">GitHub Repo</a>
+          </div>
+          <div class="metrics" aria-label="Research metrics">
+            <div class="metric"><strong>98.70%</strong><span>Accuracy</span></div>
+            <div class="metric"><strong>98.30%</strong><span>Precision</span></div>
+            <div class="metric"><strong>98.57%</strong><span>Recall</span></div>
+            <div class="metric"><strong>50</strong><span>Federated rounds</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="architecture">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">System Architecture</div>
+            <h2>Multi-cloud collaboration without raw telemetry leakage.</h2>
+          </div>
+          <p>The supplied infographic is embedded as the visual center of the portal and connects the research method to a practical cloud/SOC workflow.</p>
+        </div>
+        <div class="grid two">
+          <div class="card">
+            <h3>Threat-Aware Federated Learning</h3>
+            <p>Each cloud node trains locally on normalized security telemetry. The global model is updated with adaptive weights based on validation behavior, data quality, and threat drift.</p>
+          </div>
+          <div class="card">
+            <h3>Proximal Stability Control</h3>
+            <p>A proximal term limits harmful client divergence in non-IID environments, improving robustness across AWS, Azure, Google Cloud, private cloud, and SOC telemetry streams.</p>
+          </div>
+        </div>
+        <div class="grid" style="margin-top:16px">
+            <img class="framework" src="assets/images/fedthreat-x-framework.webp" alt="FedThreat-X multi-cloud security framework infographic">
+        </div>
+      </section>
+
+      <section class="section" id="analytics">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Interactive Analytics</div>
+            <h2>Research visualizations built into the website.</h2>
+          </div>
+          <p>The portal includes DistPlot, Pie Chart, ViolinPlot, HeatMap, PairPlot, and JointPlot views for model performance, class balance, stability, confusion matrix behavior, and feature impact. Static charts below are derived from the published aggregate evidence, not unreleased raw telemetry.</p>
+        </div>
+        <div class="chart-grid">
+          <div class="chart-card wide"><div id="performanceChart" class="chart"></div></div>
+          <div class="chart-card"><div id="distChart" class="chart"></div></div>
+          <div class="chart-card"><div id="pieChart" class="chart"></div></div>
+          <div class="chart-card"><div id="violinChart" class="chart"></div></div>
+          <div class="chart-card"><div id="heatmapChart" class="chart"></div></div>
+          <div class="chart-card wide"><div id="pairChart" class="chart tall"></div></div>
+          <div class="chart-card wide"><div id="jointChart" class="chart"></div></div>
+        </div>
+      </section>
+
+      <section class="section alt" id="research-assets">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Research Asset Gallery</div>
+            <h2>Portable visual evidence for GitHub, reports, and citations.</h2>
+          </div>
+          <p>These repository-native SVG charts are generated from <a href="assets/data/project-metrics.json">the documented metric evidence</a>, so they render without a JavaScript dependency.</p>
+        </div>
+        <div class="grid two">
+          <img class="plot-preview" src="assets/images/plots/distplot-f1-distribution.svg" alt="DistPlot of reported F1 score distribution">
+          <img class="plot-preview" src="assets/images/plots/pie-guide-class-composition.svg" alt="Pie chart of GUIDE evaluation class composition">
+          <img class="plot-preview" src="assets/images/plots/violin-model-metric-distribution.svg" alt="ViolinPlot of reported model metrics">
+          <img class="plot-preview" src="assets/images/plots/heatmap-confusion-matrix.svg" alt="HeatMap of published confusion matrix narrative">
+          <img class="plot-preview" src="assets/images/plots/pairplot-model-metrics.svg" alt="PairPlot of published model metrics">
+          <img class="plot-preview" src="assets/images/plots/jointplot-feature-importance.svg" alt="JointPlot of feature importance">
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">SOC Pipeline</div>
+            <h2>From cloud log to response decision.</h2>
+          </div>
+          <p>The deployment flow follows the paper: feature extraction, local inference, calibrated threat scoring, and SOC alert generation.</p>
+        </div>
+        <div class="pipeline">
+          <div class="step"><b>01</b><h3>Telemetry</h3><p>Cloud logs, identities, entities, detectors, URLs, and MITRE ATT&CK signals.</p></div>
+          <div class="step"><b>02</b><h3>Local Training</h3><p>Lightweight 3-layer MLP learns locally on each cloud node.</p></div>
+          <div class="step"><b>03</b><h3>Aggregation</h3><p>Threat-aware weighting prioritizes reliable client updates.</p></div>
+          <div class="step"><b>04</b><h3>Scoring</h3><p>Softmax confidence produces real-time triage probabilities.</p></div>
+          <div class="step"><b>05</b><h3>SOC Action</h3><p>Incidents are routed as true positive, benign positive, or false positive.</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="profile">
+        <div class="profile">
+          <div class="profile-photo" role="img" aria-label="FedThreat-X research profile visual"></div>
+          <div>
+            <div class="eyebrow">Researcher Profile</div>
+            <h2>Md Anisur Rahman Chowdhury</h2>
+            <p>Lead author and researcher for FedThreat-X, published at the 2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence & Networking (QPAIN), Chittagong, Bangladesh, April 16-18, 2026.</p>
+            <div class="profile-links">
+              <a class="button" href="https://linkedin.com/in/md-anisur-rahman-chowdhury-15862420a">LinkedIn</a>
+              <a class="button" href="https://github.com/ANIS151993">GitHub</a>
+              <a class="button" href="https://scholar.google.com/citations?user=NQyywPoAAAAJ">Google Scholar</a>
+              <a class="button" href="https://marcbd.com">Portfolio</a>
+              <a class="button" href="https://researchgate.net/profile/Md-Anisur-Rahman-Chowdhury">ResearchGate</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Copyright © 2026 Md Anisur Rahman Chowdhury. FedThreat-X research portal.
+    </footer>
+  </body>
+</html>
