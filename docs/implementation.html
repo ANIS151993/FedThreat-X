@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FedThreat-X Implementation Guide</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="brand-mark">FX</span><span>FedThreat-X</span></a>
+      <nav class="nav"><a href="index.html">Portal</a><a href="report.html">Report</a><a href="poster.html">Poster</a></nav>
+    </header>
+    <main class="report">
+      <div class="eyebrow">Implementation Blueprint</div>
+      <h1>FedThreat-X Deployment Path</h1>
+      <p class="lead">A practical rollout plan for adapting the published framework to production SOC environments.</p>
+      <h2>1. Data Foundation</h2>
+      <p>Normalize security incidents, fill missing categorical values with Unknown, group rare categories, frequency-encode high-cardinality fields, standardize timestamps, deduplicate telemetry, and stratify splits by incident grade, organization, and detector.</p>
+      <h2>2. Local Client Training</h2>
+      <p>Deploy a lightweight MLP per cloud node. Keep raw logs inside each cloud boundary and exchange only model weights or gradients during synchronized communication rounds.</p>
+      <h2>3. Federated Coordination</h2>
+      <p>Use threat-aware client weighting based on validation accuracy and drift. Apply proximal regularization to stabilize non-IID client updates and reduce noisy divergence.</p>
+      <h2>4. SOC Integration</h2>
+      <p>Expose the global model through a low-latency scoring service. Convert incoming logs into feature vectors, estimate threat probabilities, and route alerts to incident response with confidence and class labels.</p>
+      <h2>5. Governance</h2>
+      <p>Maintain data residency boundaries, audit aggregation events, monitor model drift, and use secure aggregation before high-risk production adoption.</p>
+    </main>
+    <footer class="footer">Copyright © 2026 Md Anisur Rahman Chowdhury.</footer>
+  </body>
+</html>
