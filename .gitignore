@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.env
+.env.*
+project.md
+FedThreat-X_A_Privacy-Preserving_Federated_Threat_Intelligence_Framework_for_Multi-Cloud_Cybersecurity.pdf
+FedThreat-X_Multi-Cloud_Security_Framework.png
