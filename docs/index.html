@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FedThreat-X | Federated Multi-Cloud Threat Intelligence</title>
+    <meta name="description" content="FedThreat-X research portal for privacy-preserving federated threat intelligence across multi-cloud cybersecurity environments.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="FedThreat-X home"><span class="brand-mark">FX</span><span>FedThreat-X</span></a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#analytics">Analytics</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#paper-review">Paper Review</a>
+        <a href="#video">Video</a>
+        <a href="report.html">Report</a>
+        <a href="poster.html">Poster</a>
+        <a href="implementation.html">Implementation</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="eyebrow">IEEE QPAIN 2026 Published Research</div>
+          <h1>FedThreat-X</h1>
+          <p class="lead">A privacy-preserving federated threat intelligence framework for multi-cloud cybersecurity, designed for heterogeneous cloud telemetry, non-IID threat drift, and SOC-ready detection without exchanging raw logs.</p>
+          <div class="actions">
+            <a class="button primary" href="#paper-review">Review the Paper</a>
+            <a class="button" href="https://ieeexplore.ieee.org/document/11546478">IEEE Xplore</a>
+            <a class="button" href="#video">Watch Video</a>
+            <a class="button" href="https://github.com/ANIS151993/FedThreat-X">GitHub Repo</a>
+          </div>
+          <div class="metrics" aria-label="Research metrics">
+            <div class="metric"><strong>98.70%</strong><span>Accuracy</span></div>
+            <div class="metric"><strong>98.30%</strong><span>Precision</span></div>
+            <div class="metric"><strong>98.57%</strong><span>Recall</span></div>
+            <div class="metric"><strong>50</strong><span>Federated rounds</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="architecture">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">System Architecture</div>
+            <h2>Multi-cloud collaboration without raw telemetry leakage.</h2>
+          </div>
+          <p>The supplied infographic is embedded as the visual center of the portal and connects the research method to a practical cloud/SOC workflow.</p>
+        </div>
+        <div class="grid two">
+          <div class="card">
+            <h3>Threat-Aware Federated Learning</h3>
+            <p>Each cloud node trains locally on normalized security telemetry. The global model is updated with adaptive weights based on validation behavior, data quality, and threat drift.</p>
+          </div>
+          <div class="card">
+            <h3>Proximal Stability Control</h3>
+            <p>A proximal term limits harmful client divergence in non-IID environments, improving robustness across AWS, Azure, Google Cloud, private cloud, and SOC telemetry streams.</p>
+          </div>
+        </div>
+        <div class="grid" style="margin-top:16px">
+            <img class="framework" src="assets/images/fedthreat-x-framework.webp" alt="FedThreat-X multi-cloud security framework infographic">
+        </div>
+      </section>
+
+      <section class="section" id="analytics">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Interactive Analytics</div>
+            <h2>Research visualizations built into the website.</h2>
+          </div>
+          <p>The portal includes DistPlot, Pie Chart, ViolinPlot, HeatMap, PairPlot, and JointPlot views for model performance, class balance, stability, confusion matrix behavior, and feature impact. Static charts below are derived from the published aggregate evidence, not unreleased raw telemetry.</p>
+        </div>
+        <div class="chart-grid">
+          <div class="chart-card wide"><div id="performanceChart" class="chart"></div></div>
+          <div class="chart-card"><div id="distChart" class="chart"></div></div>
+          <div class="chart-card"><div id="pieChart" class="chart"></div></div>
+          <div class="chart-card"><div id="violinChart" class="chart"></div></div>
+          <div class="chart-card"><div id="heatmapChart" class="chart"></div></div>
+          <div class="chart-card wide"><div id="pairChart" class="chart tall"></div></div>
+          <div class="chart-card wide"><div id="jointChart" class="chart"></div></div>
+        </div>
+      </section>
+
+      <section class="section alt" id="research-assets">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Research Asset Gallery</div>
+            <h2>Portable visual evidence for GitHub, reports, and citations.</h2>
+          </div>
+          <p>These repository-native SVG charts are generated from <a href="assets/data/project-metrics.json">the documented metric evidence</a>, so they render without a JavaScript dependency.</p>
+        </div>
+        <div class="grid two">
+          <img class="plot-preview" src="assets/images/plots/distplot-f1-distribution.svg" alt="DistPlot of reported F1 score distribution">
+          <img class="plot-preview" src="assets/images/plots/pie-guide-class-composition.svg" alt="Pie chart of GUIDE evaluation class composition">
+          <img class="plot-preview" src="assets/images/plots/violin-model-metric-distribution.svg" alt="ViolinPlot of reported model metrics">
+          <img class="plot-preview" src="assets/images/plots/heatmap-confusion-matrix.svg" alt="HeatMap of published confusion matrix narrative">
+          <img class="plot-preview" src="assets/images/plots/pairplot-model-metrics.svg" alt="PairPlot of published model metrics">
+          <img class="plot-preview" src="assets/images/plots/jointplot-feature-importance.svg" alt="JointPlot of feature importance">
+        </div>
+      </section>
+
+      <section class="section" id="paper-review">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Research Paper Review</div>
+            <h2>Understand FedThreat-X from problem framing to SOC deployment.</h2>
+          </div>
+          <p>This reading layer translates the published paper into an operational narrative for researchers, cloud-security architects, and SOC teams.</p>
+        </div>
+        <div class="paper-review-grid">
+          <article class="paper-cover">
+            <img src="assets/images/figures/paper-first-page.png" alt="First page of the FedThreat-X IEEE paper">
+            <div class="paper-cover-meta">
+              <span>IEEE QPAIN 2026</span>
+              <span>Published April 16, 2026</span>
+            </div>
+          </article>
+          <div class="paper-reading">
+            <article class="reading-block">
+              <span class="reading-index">01</span>
+              <div><h3>The research problem</h3><p>Centralized threat intelligence requires sensitive logs to leave their cloud boundary. In multi-cloud environments, that creates data-residency, confidentiality, and scale constraints precisely when coordinated attack patterns need cross-provider visibility.</p></div>
+            </article>
+            <article class="reading-block">
+              <span class="reading-index">02</span>
+              <div><h3>The technical answer</h3><p>FedThreat-X keeps training local to each cloud node, exchanges model updates rather than raw telemetry, and uses threat-aware weighting plus proximal regularization to manage client quality, drift, and non-IID behavior.</p></div>
+            </article>
+            <article class="reading-block">
+              <span class="reading-index">03</span>
+              <div><h3>What was evaluated</h3><p>The study uses the Microsoft GUIDE security-incident dataset with 13M evidence records, 1M triaged events, and 441 MITRE ATT&amp;CK techniques, comparing CNN, LSTM, GNN-TI, and BiLSTM baselines.</p></div>
+            </article>
+            <article class="reading-block">
+              <span class="reading-index">04</span>
+              <div><h3>What the result means</h3><p>FedThreat-X reports 98.70% accuracy and F1-score, with 98.30% precision and 98.57% recall. The value is not only the aggregate score: the framework is designed to preserve privacy while producing a deployable SOC threat score.</p></div>
+            </article>
+          </div>
+        </div>
+        <div class="review-insights">
+          <article class="card"><h3>Why adaptive aggregation matters</h3><p>Uniform averaging treats every cloud client equally. The proposed weighting favors reliable updates while accounting for drift, limiting the influence of lower-quality or inconsistent client behavior.</p></article>
+          <article class="card"><h3>Why proximal stability matters</h3><p>Cloud telemetry rarely follows a single distribution. The proximal term constrains local model divergence and helps the federated process remain stable under heterogeneous incident patterns.</p></article>
+          <article class="card"><h3>Why SOC teams should care</h3><p>The final global model converts incoming logs into threat-class probabilities and routes high-confidence incidents into an incident-response workflow without requiring a centralized raw-log lake.</p></article>
+        </div>
+        <div class="paper-policy">
+          <div>
+            <div class="eyebrow">Document Security Policy</div>
+            <h3>Controlled access to the research document.</h3>
+            <p>The research paper is distributed through a documented access workflow. Review the official IEEE record first, acknowledge the publication-use policy, then request the protected paper package from the author for academic or professional use.</p>
+          </div>
+          <div class="policy-actions">
+            <a class="button" href="https://ieeexplore.ieee.org/document/11546478" target="_blank" rel="noreferrer">Open IEEE Xplore</a>
+            <button class="button primary" type="button" data-open-gate>Request Secure Paper Access</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="video">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Research Video</div>
+            <h2>Watch the FedThreat-X technical walkthrough.</h2>
+          </div>
+          <p>Use the chapter controls to move between the research motivation, federated architecture, model strategy, evaluation, and deployment implications.</p>
+        </div>
+        <div class="video-grid">
+          <article class="video-brief">
+            <h3>Video briefing</h3>
+            <p>The presentation connects the paper's privacy premise to a practical multi-cloud security workflow: local learning, adaptive coordination, and real-time SOC scoring.</p>
+            <div class="video-tags"><span>Federated learning</span><span>Multi-cloud</span><span>Threat intelligence</span><span>SOC operations</span></div>
+            <div class="video-frame"><iframe id="research-video-player" src="https://www.youtube.com/embed/8kYnDgFR79g?rel=0" title="FedThreat-X research overview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          </article>
+          <article class="video-chapters">
+            <div class="chapter-list">
+              <button class="chapter-button is-active" type="button" data-video-start="0" data-video-title="Research motivation" data-video-note="Why raw-log centralization becomes difficult in privacy-sensitive multi-cloud incident response.">00:00 Motivation</button>
+              <button class="chapter-button" type="button" data-video-start="45" data-video-title="FedThreat-X architecture" data-video-note="How local cloud learners, adaptive aggregation, and global coordination work together.">00:45 Architecture</button>
+              <button class="chapter-button" type="button" data-video-start="100" data-video-title="Federated learning strategy" data-video-note="Threat-aware client weighting and proximal stability control for non-IID telemetry.">01:40 Federated learning</button>
+              <button class="chapter-button" type="button" data-video-start="160" data-video-title="Evaluation and findings" data-video-note="How the proposed framework compares with CNN, LSTM, GNN-TI, and BiLSTM baselines.">02:40 Results</button>
+              <button class="chapter-button" type="button" data-video-start="220" data-video-title="SOC deployment" data-video-note="From incoming cloud log to threat score, triage decision, and incident response handoff.">03:40 SOC deployment</button>
+            </div>
+            <div class="chapter-detail"><span class="eyebrow">Now Exploring</span><h3 id="video-chapter-title">Research motivation</h3><p id="video-chapter-note">Why raw-log centralization becomes difficult in privacy-sensitive multi-cloud incident response.</p><div class="chapter-rail"><span class="is-active">Problem</span><span>Architecture</span><span>Learning</span><span>Results</span><span>SOC</span></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">SOC Pipeline</div>
+            <h2>From cloud log to response decision.</h2>
+          </div>
+          <p>The deployment flow follows the paper: feature extraction, local inference, calibrated threat scoring, and SOC alert generation.</p>
+        </div>
+        <div class="pipeline">
+          <div class="step"><b>01</b><h3>Telemetry</h3><p>Cloud logs, identities, entities, detectors, URLs, and MITRE ATT&CK signals.</p></div>
+          <div class="step"><b>02</b><h3>Local Training</h3><p>Lightweight 3-layer MLP learns locally on each cloud node.</p></div>
+          <div class="step"><b>03</b><h3>Aggregation</h3><p>Threat-aware weighting prioritizes reliable client updates.</p></div>
+          <div class="step"><b>04</b><h3>Scoring</h3><p>Softmax confidence produces real-time triage probabilities.</p></div>
+          <div class="step"><b>05</b><h3>SOC Action</h3><p>Incidents are routed as true positive, benign positive, or false positive.</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="profile">
+        <div class="profile">
+          <img class="profile-photo" src="assets/images/md-anisur-rahman-chowdhury.webp" alt="Md Anisur Rahman Chowdhury">
+          <div>
+            <div class="eyebrow">Researcher Profile</div>
+            <h2>Md Anisur Rahman Chowdhury</h2>
+            <p>Lead author and researcher for FedThreat-X, published at the 2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence & Networking (QPAIN), Chittagong, Bangladesh, April 16-18, 2026.</p>
+            <div class="profile-links">
+              <a class="button" href="https://linkedin.com/in/md-anisur-rahman-chowdhury-15862420a">LinkedIn</a>
+              <a class="button" href="https://github.com/ANIS151993">GitHub</a>
+              <a class="button" href="https://scholar.google.com/citations?user=NQyywPoAAAAJ">Google Scholar</a>
+              <a class="button" href="https://marcbd.com">Portfolio</a>
+              <a class="button" href="https://researchgate.net/profile/Md-Anisur-Rahman-Chowdhury">ResearchGate</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="gate-overlay is-hidden" id="download-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+      <div class="gate-modal">
+        <div class="gate-heading"><div><span class="eyebrow">FedThreat-X Research Document</span><h2 id="gate-title">Secure paper access</h2></div><button class="icon-button" type="button" data-close-gate aria-label="Close secure paper access">&#215;</button></div>
+        <section class="gate-step" data-gate-step="1">
+          <h3>Publication-use acknowledgement</h3>
+          <p>Access requests are intended for academic review, research collaboration, and professional evaluation. The paper remains protected by copyright and must be cited appropriately.</p>
+          <a class="button" href="https://github.com/ANIS151993" target="_blank" rel="noreferrer">Open author GitHub</a>
+          <label class="gate-check"><input id="gate-use" type="checkbox"> I will use the document only for permitted academic or professional purposes.</label>
+          <label class="gate-check"><input id="gate-cite" type="checkbox"> I will preserve authorship and cite the IEEE publication when referencing this work.</label>
+          <button class="button primary" type="button" id="gate-next" disabled>Continue to access request</button>
+        </section>
+        <section class="gate-step is-hidden" data-gate-step="2">
+          <h3>Request the protected paper package</h3>
+          <p>Send the prefilled request to the author. After approval, you will receive the protected document package and its access instructions.</p>
+          <a class="button primary" href="mailto:engr.aanis@gmail.com?subject=FedThreat-X%20research%20paper%20access%20request&body=Hello%20Md%20Anisur%20Rahman%20Chowdhury%2C%0A%0AI%20reviewed%20the%20FedThreat-X%20publication-use%20policy%20and%20would%20like%20to%20request%20the%20protected%20research%20paper%20package.%0A%0AName%3A%0AAffiliation%3A%0AIntended%20use%3A%0A%0AThank%20you.">Email access request</a>
+          <a class="button" href="https://ieeexplore.ieee.org/document/11546478" target="_blank" rel="noreferrer">Use official IEEE record</a>
+        </section>
+      </div>
+    </div>
+
+    <footer class="footer">
+      Copyright © 2026 Md Anisur Rahman Chowdhury. FedThreat-X research portal.
+    </footer>
+  </body>
+</html>
